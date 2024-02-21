@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Design page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="save-button">
+        <button type="button" class="AllSave-btn">
+            <span class="Feature-icon">
+              <i class='bx bx-save bx-md bx-tada-hover'></i>
+            </span>
+        </button>    
+    </div>
+
+    <div class="name-container">
+        <div>
+            <label for="project-name-input">Project Name:</label>
+            <input type="text" id="project-name-input" placeholder="Enter project name"> 
+            <button id="save-project-name">Save</button>
+    
+            <h1 id="project-name-label">Default Project Name</h1>
+        </div>
+    </div>  
+    
+    <style>
+        body {
+           background-color:#49A078;
+        }
+        canvas {
+            border: 1px solid #000000;
+        }
+     </style>
+     <div class="sidebar">
+                 <button type="button" class="Settings-btn">
+                      <span class="Feature-icon">
+                         <i class='bx bx-cog bx-md bx-spin-hover'></i>
+                    </span>
+                </button>
+                <button type="button" class="Comment-btn">
+                    <span class="Feature-icon">
+                        <i class='bx bxs-comment-add bx-md bx-tada-hover'></i>
+                    </span>
+                </button>
+            
+                <button type="button" class="Highlight-btn">
+                    <span class="Feature-icon">
+                        <i class='bx bx-highlight bx-md bx-tada-hover'></i>
+                    </span>
+                </button>
+            
+                <button type="button" class="Draw-btn">
+                    <span class="Feature-icon">
+                      <i class='bx bxs-edit-alt bx-md bx-tada-hover'></i>
+                    </span>
+                  </button>                   
+     </div>
+
+<div class="design-container" id="design-container">
+    <canvas id="myCanvas" width="1215" height="525"></canvas>
+</div>
+
+<!-- Add the popup container with the toggle switches -->
+<div class="popup-container">
+    <div class="popup-content">
+        <div class="popup-header">
+            <h2>Settings</h2>
+        </div>
+        <div class="popup-body">
+            <div class="setting-item">
+                <span class="setting-name">Dark mode</span>
+                <label class="switch">
+                  <input type="checkbox" id="dark-mode-switch">
+                  <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="setting-item">
+                <span class="setting-name">Annotations</span>
+                <label class="switch">
+                  <input type="checkbox" id="annotations-switch">
+                  <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="project-status-container">
+    <select class="project-status-dropdown">
+      <option value="project">Project Status : </option>
+      <option value="in-progress">In Progress</option>
+      <option value="for-review">For Review </option>
+      <option value="approved">Approved </option>
+</div>
+
+<script src="App.js"></script>
